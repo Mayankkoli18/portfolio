@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noai, noimageai">
+<title>Mayank Nagesh Koli - Game Programmer</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="side">
+  <div>
+    <h1 id="name"></h1>
+    <p class="tag" id="tagline"></p>
+  </div>
+  <div class="menu">
+    <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#models">3D work</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="content" id="top">
+  <div class="screen">
+    <div class="slider" id="slider"></div>
+    <div class="bar">
+      <span id="slideTitle"></span>
+      <span id="dots"></span>
+    </div>
+  </div>
+
+  <div class="part" id="about">
+    <h2>About</h2>
+    <p id="aboutText"></p>
+    <dl id="skills"></dl>
+  </div>
+
+  <div class="part" id="projects">
+    <h2>Projects</h2>
+    <div id="majorList"></div>
+    <h3>Other projects</h3>
+    <div id="otherList"></div>
+  </div>
+
+  <div class="part" id="models">
+    <h2>3D work</h2>
+    <div class="grid" id="modelGrid"></div>
+  </div>
+
+  <div class="part" id="contact">
+    <h2>Contact</h2>
+    <p>Open to game programming roles.</p>
+    <div id="links"></div>
+  </div>
+</div>
+
+<div id="toast">Copied</div>
+
+<dialog id="box">
+  <button id="closeBtn">Close</button>
+  <div id="boxContent"></div>
+</dialog>
+
+<dialog id="bigPic">
+  <img id="bigImg" alt="">
+</dialog>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
