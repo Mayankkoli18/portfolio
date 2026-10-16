@@ -1,10 +1,11 @@
 const profile = {
   name: "Mayank Nagesh Koli",
   tagline: "Game Programmer From India",
-  about: "I'm a game programmer, building solo and team projects in Unity and Godot. I've spent a lot of time on multiplayer, from ENet to Steam multiplayer. I usually end up leading programming in projects, and therefore I'm very used to communicating in group environments. With consistent game jam experience I have learned to manage project scopes and deadlines. I'm actively looking for my next role.",
+  about: "I'm a game programmer, building solo and team projects in Unity and Godot. I've spent a lot of time on multiplayer, from ENet to Steam multiplayer I usually end up leading programming in projects. With consistent game jam experience I have learned to manage project scopes and deadlines, and therefore I'm very used to communication in group environments. I'm actively looking for my next role.",
   email: "mayankkoli.dev@gmail.com",
   discord: "737328625350868992",
   links: [
+    { label: "Resume", url: "media/resume.pdf" },
     { label: "GitHub", url: "https://github.com/Mayankkoli18" },
     { label: "itch.io", url: "https://okiromori.itch.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/mayank-koli-224580253/" }
@@ -28,12 +29,10 @@ const companies = [
   { name: "Many other freelance clients" }
 ]
 
-const hobbies = [
-  { name: "Art", note: "" },
-  { name: "Making music", note: "" },
-  { name: "Martial arts", note: "" },
-  { name: "Journaling", note: "" },
-  { name: "Fixing bugs", note: "" }
+const achievements = [
+  { rank: "1st", event: "Godot India Community Game Jam 3" },
+  { rank: "3rd", event: "Godot India Community Game Jam 2" },
+  { rank: "6th", event: "Wasteland Jam 2" }
 ]
 
 const recommendations = [

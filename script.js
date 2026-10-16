@@ -65,6 +65,12 @@ for (var group in skills) {
 }
 document.getElementById("skills").innerHTML = skillHtml
 
+var achHtml = ""
+for (var i = 0; i < achievements.length; i++) {
+  achHtml += '<div class="ach"><span class="rank">' + achievements[i].rank + '</span><span>' + achievements[i].event + '</span></div>'
+}
+document.getElementById("achList").innerHTML = achHtml
+
 var majorHtml = ""
 var otherHtml = ""
 for (var i = 0; i < projects.length; i++) {
@@ -92,14 +98,6 @@ for (var i = 0; i < companies.length; i++) {
 }
 document.getElementById("companyList").innerHTML = companyHtml
 
-var hobbyHtml = ""
-for (var i = 0; i < hobbies.length; i++) {
-  hobbyHtml += '<div class="other"><div><h3>' + hobbies[i].name + '</h3>'
-  if (hobbies[i].note) hobbyHtml += '<p>' + hobbies[i].note + '</p>'
-  hobbyHtml += '</div></div>'
-}
-document.getElementById("hobbyList").innerHTML = hobbyHtml
-
 var recHtml = ""
 if (recommendations.length == 0) recHtml = "<p>* content pending</p>"
 for (var i = 0; i < recommendations.length; i++) {
@@ -115,10 +113,10 @@ document.getElementById("recList").innerHTML = recHtml
 var modelHtml = ""
 for (var n = 1; n <= models.imgs; n++) {
   var title = models.titles[n - 1] || "Model " + n
-  modelHtml += '<figure><div class="pic"><img src="media/models/img' + n + '.png" alt="' + title + '" onclick="bigPic(this)" onerror="fixImg(this)"></div><figcaption>' + title + '</figcaption></figure>'
+  modelHtml += '<figure><div class="pic"><img src="media/models/img' + n + '.png" alt="' + title + '" onclick="bigPic(this)" onerror="fixImg(this)"></div></figure>'
 }
 for (var n = 1; n <= models.vids; n++) {
-  modelHtml += '<figure><div class="pic"><video controls src="media/models/vid' + n + '.mp4"></video></div><figcaption>Video ' + n + '</figcaption></figure>'
+  modelHtml += '<figure><div class="pic"><video controls src="media/models/vid' + n + '.mp4"></video></div></figure>'
 }
 document.getElementById("modelGrid").innerHTML = modelHtml
 

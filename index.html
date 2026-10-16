@@ -20,10 +20,10 @@
     <a href="#about">About</a>
     <a href="#companies">Companies</a>
     <a href="#projects">Projects</a>
-    <a href="#hobbies">Hobbies</a>
     <a href="#models">3D work</a>
     <a href="#recommendations">Recommendations</a>
     <a href="#contact">Contact</a>
+    <a href="media/resume.pdf" target="_blank">Resume</a>
   </div>
 </div>
 
@@ -38,8 +38,19 @@
 
   <div class="part" id="about">
     <h2>About</h2>
-    <p id="aboutText"></p>
-    <dl id="skills"></dl>
+    <div class="about-wrap">
+      <div class="about-main">
+        <p id="aboutText"></p>
+        <dl id="skills"></dl>
+      </div>
+      <aside class="about-side">
+        <div class="pic photo">
+          <img src="media/profile/photo.png" alt="Mayank Nagesh Koli" onerror="fixImg(this)">
+        </div>
+        <h3>Achievements</h3>
+        <div id="achList"></div>
+      </aside>
+    </div>
   </div>
 
   <div class="part" id="companies">
@@ -52,11 +63,6 @@
     <div id="majorList"></div>
     <h3>Other projects</h3>
     <div id="otherList"></div>
-  </div>
-
-  <div class="part" id="hobbies">
-    <h2>Hobbies</h2>
-    <div id="hobbyList"></div>
   </div>
 
   <div class="part" id="models">
@@ -90,4 +96,4 @@
 <script src="data.js"></script>
 <script src="script.js"></script>
 </body>
-</html>
+</html> 
