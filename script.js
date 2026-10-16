@@ -2,11 +2,18 @@ document.getElementById("name").innerHTML = profile.name
 document.getElementById("tagline").innerHTML = profile.tagline
 document.getElementById("aboutText").innerHTML = profile.about
 
+var exts = ["png", "jpg", "jpeg", "webp", "gif", "PNG", "JPG", "JPEG"]
+
 function fixImg(img) {
-  if (img.src.indexOf(".png") > -1) {
-    img.src = img.src.replace(".png", ".jpg")
+  var i = parseInt(img.getAttribute("data-try") || "0") + 1
+  if (i < exts.length) {
+    img.setAttribute("data-try", i)
+    img.src = img.src.replace(/\.[a-zA-Z]+$/, "." + exts[i])
   } else {
     img.style.display = "none"
+    if (img.parentNode && img.parentNode.classList.contains("pic")) {
+      img.parentNode.classList.add("missing")
+    }
   }
 }
 
@@ -78,6 +85,32 @@ for (var i = 0; i < projects.length; i++) {
 }
 document.getElementById("majorList").innerHTML = majorHtml
 document.getElementById("otherList").innerHTML = otherHtml
+
+var companyHtml = ""
+for (var i = 0; i < companies.length; i++) {
+  companyHtml += '<div class="other"><div><h3>' + companies[i].name + '</h3></div></div>'
+}
+document.getElementById("companyList").innerHTML = companyHtml
+
+var hobbyHtml = ""
+for (var i = 0; i < hobbies.length; i++) {
+  hobbyHtml += '<div class="other"><div><h3>' + hobbies[i].name + '</h3>'
+  if (hobbies[i].note) hobbyHtml += '<p>' + hobbies[i].note + '</p>'
+  hobbyHtml += '</div></div>'
+}
+document.getElementById("hobbyList").innerHTML = hobbyHtml
+
+var recHtml = ""
+if (recommendations.length == 0) recHtml = "<p>* content pending</p>"
+for (var i = 0; i < recommendations.length; i++) {
+  var r = recommendations[i]
+  recHtml += '<div class="other"><div><h3>' + r.name + '</h3></div><div class="socials">'
+  for (var j = 0; j < r.socials.length; j++) {
+    recHtml += '<a href="' + r.socials[j].url + '" target="_blank">' + r.socials[j].label + '</a>'
+  }
+  recHtml += '</div></div>'
+}
+document.getElementById("recList").innerHTML = recHtml
 
 var modelHtml = ""
 for (var n = 1; n <= models.imgs; n++) {

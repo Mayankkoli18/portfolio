@@ -1,7 +1,7 @@
 const profile = {
   name: "Mayank Nagesh Koli",
   tagline: "Game Programmer From India",
-  about: "I'm a game programmer, building solo and team projects in Unity and Godot. I've spent a lot of time on multiplayer, from ENet to Steam peer to peer. I usually end up leading programming. I'm actively looking for my next role.",
+  about: "I'm a game programmer, building solo and team projects in Unity and Godot. I've spent a lot of time on multiplayer, from ENet to Steam multiplayer. I usually end up leading programming in projects, and therefore I'm very used to communicating in group environments. With consistent game jam experience I have learned to manage project scopes and deadlines. I'm actively looking for my next role.",
   email: "mayankkoli.dev@gmail.com",
   discord: "737328625350868992",
   links: [
@@ -12,13 +12,33 @@ const profile = {
 }
 
 const skills = {
-  "Engines": ["Godot 4", "Unity"],
-  "Languages": ["GDScript", "C#", "GDShader"],
-  "Design": ["Game design", "Mechanics design"],
+  "Engines": ["Godot 4", "Unity", "Construct3"],
+  "Programming languages": ["C#", "C++", "Python", "Java", "GDShader", "GDScript"],
+  "Technical Design": ["Game design", "Mechanics design", "Game engine plugin design"],
   "Multiplayer": ["ENet", "Steam multiplayer"],
-  "3D and CAD": ["Blender", "AutoCAD", "Fusion 360"],
-  "Art and audio": ["Krita", "GIMP", "Bosca Ceoil", "LMMS"]
+  "3D and CAD": ["Blender", "AutoCAD", "Fusion 360", "Siemens NX CAD"],
+  "Art and audio": ["Adobe Suite", "DaVinci Resolve", "Aseprite", "Krita", "GIMP", "Bosca Ceoil", "LMMS"],
+  "Languages": ["English", "Hindi", "Marathi", "Finnish (actively learning)"]
 }
+
+const companies = [
+  { name: "Rymo Robotic" },
+  { name: "Illegendaries" },
+  { name: "Ankkalab" },
+  { name: "Many other freelance clients" }
+]
+
+const hobbies = [
+  { name: "Art", note: "" },
+  { name: "Making music", note: "" },
+  { name: "Martial arts", note: "" },
+  { name: "Journaling", note: "" },
+  { name: "Fixing bugs", note: "" }
+]
+
+const recommendations = [
+  {name: "Milka Suorsa", socials: [{ label: "Instagram", url: "https://www.instagram.com/milk4ppl/?hl=en" }]}
+]
 
 const slides = [
   { title: "Nimi Pelille", folder: "nimi-pelille", link: "https://ankkalab.itch.io/nimi-pelille" },
@@ -38,7 +58,7 @@ const projects = [
     tools: "Godot",
     event: "Brackeys Game Jam 2026.2",
     result: "",
-    timeline: "",
+    timeline: "August 23rd 2026 - August 30th 2026",
     link: "https://ankkalab.itch.io/nimi-pelille",
     linkLabel: "Play on itch.io",
     imgs: 3,
@@ -55,7 +75,7 @@ const projects = [
     tools: "Godot",
     event: "",
     result: "",
-    timeline: "",
+    timeline: "December 2024 - October 2026, joined development on June 2026",
     link: "https://store.steampowered.com/app/4579910/Food_for_Fairies/",
     linkLabel: "Wishlist on Steam",
     imgs: 4,
@@ -72,7 +92,7 @@ const projects = [
     tools: "Godot",
     event: "Godot India Community Game Jam 3",
     result: "Ranked 1st",
-    timeline: "",
+    timeline: "26th July 2025 - 2nd August 2025",
     link: "https://okiromori.itch.io/last-terminal",
     linkLabel: "Play on itch.io",
     imgs: 3,
@@ -106,7 +126,7 @@ const projects = [
     tools: "Godot",
     event: "Godot Wild Jam #95",
     result: "",
-    timeline: "",
+    timeline: "11th July 2026 - 20th July 2026",
     link: "https://okiromori.itch.io/apart",
     linkLabel: "Play on itch.io",
     imgs: 3,
@@ -115,7 +135,7 @@ const projects = [
     major: true
   },
   {
-    name: "Snowcall",
+    name: "Snow Call",
     pitch: "Light thermal beacons across a frozen world to rescue your companion.",
     about: "A short low-poly 3D adventure where a radio guides you through a post-apocalyptic perma-frost. Available for Windows, macOS and Linux.",
     status: "Released",
@@ -123,7 +143,7 @@ const projects = [
     tools: "Godot",
     event: "Wasteland Jam 2",
     result: "Ranked 6th overall and 2nd in atmosphere",
-    timeline: "",
+    timeline: "30th January 2026 - 9th February 2026",
     link: "https://ankkalab.itch.io/snowcall",
     linkLabel: "Download on itch.io",
     imgs: 3,
@@ -132,7 +152,7 @@ const projects = [
     major: true
   },
   {
-    name: "DRDS",
+    name: "Devil's Razzle Dazzle Shuffle",
     pitch: "A multiplayer card game built on Steam peer to peer.",
     about: "Fight against other players in a UNO-like card game with power ups and poker patterns to help you clear out your cards fast and interrupt other players.",
     status: "Paused due to lack of resources",
@@ -159,13 +179,22 @@ const projects = [
     tech: "Steam multiplayer",
     event: "",
     result: "",
-    timeline: "",
+    timeline: "10th October 2026 - Ongoing",
     link: "",
     linkLabel: "",
     imgs: 2,
     vids: 1,
     problems: [],
     major: true
+  },
+  {
+    name: "Virtual Cat Pet",
+    pitch: "Built a virtual interactive cat pet in Godot.",
+    tools: "Godot",
+    status: "Released",
+    event: "",
+    result: "",
+    major: false
   },
   {
     name: "Tempus Tide",
